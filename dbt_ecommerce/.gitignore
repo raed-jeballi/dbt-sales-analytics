@@ -1,0 +1,25 @@
+# dbt
+target/
+dbt_packages/
+logs/
+*.db
+
+# Environment
+dbt-venv/
+.env
+.env.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Sensitive files
+profiles.yml
+*.key
+*.pem

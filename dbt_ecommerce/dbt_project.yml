@@ -1,0 +1,40 @@
+name: 'dbt_ecommerce'
+version: '1.0.0'
+profile: 'dbt_ecommerce'
+
+config-version: 2
+
+# This sets up the overall project structure
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["data"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+# SEED CONFIGURATION - for your raw CSV files
+seeds:
+  dbt_ecommerce:
+    +schema: dbt_schema_raw           # All seeds go to 'raw' schema in Snowflake
+    +enabled: true         # Process all seed files
+
+# MODEL CONFIGURATION - we'll build this out later
+models:
+  dbt_ecommerce:
+    # Default configuration for all models
+    +materialized: view
+    
+    # Staging layer - cleaned raw data
+    staging:
+      +schema: dbt_schema_staging 
+      +materialized: view
+    
+    # Marts layer - business-ready data
+    marts:
+      +schema: dbt_schema_analytics
+      +materialized: table
