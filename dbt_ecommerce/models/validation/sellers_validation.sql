@@ -1,9 +1,10 @@
 {{
     config(
-        materialized='table',
-        schema='staging'
+        materialized='table',   
+        schema='validation'  
     )
 }}
+
 
 SELECT 
     'olist_sellers_dataset' as table_name,

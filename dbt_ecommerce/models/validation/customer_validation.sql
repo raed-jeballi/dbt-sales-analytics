@@ -1,9 +1,10 @@
 {{
     config(
-        materialized='table',
-        schema='staging'
+        materialized='table',   
+        schema='validation'  
     )
 }}
+
 
 -- Simple check: Are customer IDs unique?
 SELECT 

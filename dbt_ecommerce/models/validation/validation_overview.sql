@@ -1,9 +1,10 @@
 {{
     config(
-        materialized='table',
-        schema='staging'
+        materialized='table',   
+        schema='validation'  
     )
 }}
+
 
 SELECT * FROM {{ ref('customer_validation') }}
 UNION ALL
