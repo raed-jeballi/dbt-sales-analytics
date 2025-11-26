@@ -24,3 +24,10 @@ profiles.yml
 *.key
 *.pem
 dbt_internal_packages/
+
+# Data files
+dbt_ecommerce/data/
+
+# dbt internal packages
+dbt_internal_package/
+.dbt/

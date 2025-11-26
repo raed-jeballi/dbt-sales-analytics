@@ -1,9 +1,10 @@
 {{
     config(
-        materialized='table',
-        schema='staging'
+        materialized='table',   
+        schema='validation'  
     )
 }}
+
 
 -- 1. Check if all orders have valid customers
 SELECT 

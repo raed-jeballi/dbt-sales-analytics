@@ -18,7 +18,13 @@ clean-targets:
 
 seeds:
   dbt_ecommerce:
-    +schema: dbt_schema_raw
+    +schema: raw
     +enabled: true
     # No special configuration for problematic files
 
+models:
+  dbt_ecommerce:
+    staging:
+      +schema: staging
+    validation:
+      +schema: validation
