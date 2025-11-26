@@ -5,7 +5,7 @@ logs/
 *.db
 
 # Environment
-dbt-venv/
+ecom_venv/
 .env
 .env.local
 
@@ -25,9 +25,11 @@ profiles.yml
 *.pem
 dbt_internal_packages/
 
-# Data files
-dbt_ecommerce/data/
-
 # dbt internal packages
-dbt_internal_package/
+
 .dbt/
+
+# Data files - already loaded to Snowflake
+dbt_ecommerce/data/
+data/
+*.csv
