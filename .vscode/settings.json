@@ -1,3 +1,25 @@
 {
-    "dbt.enableNewLineagePanel": true
+  "dbt.enableNewLineagePanel": true,
+  "files.exclude": {
+    "**/dbt_internal_packages": true,
+    "**/.dbt": true,
+    "**/target": true,
+    "**/dbtpackages": true,
+    "**/__pycache__": true,
+    "**/*.pyc": true,
+    "**/dbt-adapters": true,
+    "**/dbt-snowflake": true,
+    "**/dbt": true,
+    "**/dbt_include": true,
+    "**/*.so": true,
+    "**/*.dll": true,
+    "**/*.pyd": true
+  },
+  "python.defaultInterpreterPath": "${workspaceFolder}/ecom_venv/Scripts/python.exe",
+  "dbt.environmentPath": "${workspaceFolder}/ecom_venv",
+  "dbt.dbtPath": "${workspaceFolder}/ecom_venv/Scripts/dbt.exe",
+  "files.associations": {
+    "*.sql": "jinja-sql"
+  },
+  "git.ignoreLimitWarning": true
 }

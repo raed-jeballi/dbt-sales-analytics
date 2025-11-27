@@ -1,8 +1,8 @@
-name: 'dbt_ecommerce'
-version: '1.0.0'
+name: "dbt_ecommerce"
+version: "1.0.0"
 config-version: 2
 
-profile: 'dbt_ecommerce'
+profile: "dbt_ecommerce"
 
 model-paths: ["models"]
 analysis-paths: ["analyses"]
